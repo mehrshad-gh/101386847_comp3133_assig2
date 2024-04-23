@@ -1,0 +1,31 @@
+<div class="main">
+  <h2>Add new employee</h2>
+  <button class="btn btn-outline-primary mb-4" [routerLink]="['/main']">Back to main</button>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="firstName">First name:</label>
+      <input class="form-control" type="text" id="firstName" name="name" [(ngModel)]="formData.firstName" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="lastName">Last name:</label>
+      <input class="form-control" type="text" id="lastName" name="name" [(ngModel)]="formData.lastName" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="email">Email:</label>
+      <input class="form-control" type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="gender">Gender:</label>
+      <input class="form-control" type="text" id="gender" name="gender" [(ngModel)]="formData.gender" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="salary">Salary:</label>
+      <input class="form-control" type="number" id="salary" name="salary" [(ngModel)]="formData.salary" required>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <button class="btn btn-danger" type="reset">Reset form</button>
+    </div>
+  </form>
+
+</div>

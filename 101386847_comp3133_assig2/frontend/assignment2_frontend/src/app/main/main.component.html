@@ -1,0 +1,28 @@
+<div class="main">
+  <h2>Employees List</h2>
+  <button class="btn btn-outline-primary" routerLink="/add-employee">Add employee</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Employee First Name</th>
+        <th scope="col">Employee Last Name</th>
+        <th scope="col">Employee Email</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of users; track users.length) {
+        <tr>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button class="btn btn-light" [routerLink]="['/update-employee', user.id]">Update</button>
+            <button class="btn btn-light" [routerLink]="['/view-employee', user.id]">View</button>
+            <button class="btn btn-outline-danger" [routerLink]="['/delete-employee', user.id]">Delete</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

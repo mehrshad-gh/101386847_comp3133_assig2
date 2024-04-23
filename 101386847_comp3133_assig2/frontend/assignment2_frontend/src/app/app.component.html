@@ -1,0 +1,13 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/main">Employees page</a>
+    <div *ngIf="isUserLoggedIn; else isLogOut">
+      <a class="btn btn-outline-primary" routerLink="/logout">Logout</a>
+    </div>
+
+    <ng-template #isLogOut>
+      <a class="btn btn-outline-primary" routerLink="/login">Login</a>
+    </ng-template>
+  </div>
+</nav>
+<router-outlet></router-outlet>

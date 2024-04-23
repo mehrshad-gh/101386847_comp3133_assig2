@@ -1,0 +1,35 @@
+<div class="main">
+  <h2>Update employee</h2>
+  <button class="btn btn-outline-primary mb-4" [routerLink]="['/main']">Back to main</button>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label" for="firstName">First name:</label>
+      <input class="form-control" type="text" id="firstName" name="firstName" [(ngModel)]="formData.first_name" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="lastName">Last name:</label>
+      <input class="form-control" type="text" id="lastName" name="lastName" [(ngModel)]="formData.last_name" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="email">Email:</label>
+      <input class="form-control" type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="gender">Gender:</label>
+      <input class="form-control" type="text" id="gender" name="gender" [(ngModel)]="formData.gender" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="salary">Salary:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input class="form-control" type="number" id="salary" name="salary" [(ngModel)]="formData.salary" required>
+        <span class="input-group-text">.00</span>
+      </div>
+    </div>
+    <input type="hidden" name="id" [(ngModel)]="formData.id">
+    <div>
+      <button class="btn btn-outline-primary" type="submit">Submit</button>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,10 @@
+<div class="main">
+  <h3>Delete user with email: {{user.email}}?</h3>
+  <form (ngSubmit)="onSubmit()">
+    <input type="hidden" name="deleteId" [(ngModel)]="user.id">
+    <button class="btn btn-danger mb-3" type="submit">Delete user?</button>
+    <br>
+    <button class="btn btn-outline-primary" [routerLink]="['/main']">Back to main</button>
+  </form>
+
+</div>
